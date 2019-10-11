@@ -1,0 +1,54 @@
+<h2 align = "center">Completed Trainings</h2> 
+
+<div class="container" >
+  <br>
+  <a routerLink="/userhome"><h3><b>Back</b></h3></a>
+     
+  <br>      
+ 
+
+  <table class="table table-hover table-dark" border="2px">
+      <tr>
+            
+          <th> User</th>
+          <th>Mentor</th>
+          <th>Technology</th>
+          <th>Duration</th>
+          <th>Rating</th>
+          <th>Progress</th>
+          <th>Status</th>
+          <th>Progress Update</th>
+          <th>Fee
+          </th>
+        </tr>
+      <tr  *ngFor="let users of userTraining">
+          <td *ngIf="users.progress < 100">{{users.userName}}</td>
+          <td *ngIf="users.progress < 100">{{users.mentorName}}</td>
+          <td *ngIf="users.progress < 100">{{users.technologyName}}</td>
+          <td *ngIf="users.progress < 100" >{{users.startDate}} - {{users.startDate}}</td>
+        
+        <td *ngIf="users.progress < 100&&users.status">{{users.rating}}</td>
+        <td *ngIf="users.progress < 100&&users.status"><input  [(ngModel)]="users.progress" >  </td>
+        
+        <td  *ngIf="users.progress < 100&&users.status!='false'" style="color:rgb(8, 252, 8)">Active</td>
+        <td  *ngIf="users.status=='false'&&users.progress < 100" style="color:red">Pending</td>
+        <td *ngIf="users.status!='false'&&users.progress < 100"><input type="submit" (click)="edit(users)" value="update"class="btn btn-success" ></td>
+        <td *ngIf="users.status!='false'&&users.progress < 100"><input  [(ngModel)]="users.fee" > <input type="submit" (click)="payment(users)" value="Pay"class="btn btn-success" ></td>
+        
+      </tr>
+     
+  </table>
+ 
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

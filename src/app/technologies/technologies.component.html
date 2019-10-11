@@ -1,0 +1,75 @@
+<div  style="background-color: rgb(110, 133, 121)">
+        <a routerLink="/adminhome"><h5 style="color:RED">BACK</h5></a>
+           
+            <p   align="center" style="color:rgba(133, 7, 66, 0.637); font-style:bold;font-size: xx-large; ">Mentors On Demand</p>
+           
+             <div  id="ON_GOING" style="display: flex;
+             align-items: center; 
+             width: 100%;
+             height: auto;
+             background-color:  #ccc9ba;
+             ">
+            
+               <div id="ON_GOING"  style=" width: 100%;
+               height: auto;
+               margin: auto;
+               border-radius: 0px;
+               background-color: rgb(215, 230, 219);
+               font-style: oblique;
+               ">
+               <br>
+               <h3 align="center">Available Technologies</h3>
+               <br>
+               <div >
+                <table border="3px" align="center" class="table-dark">
+                        <tr>
+                                <th>
+                                        Mentor Name
+                                </th>
+                                <th>
+                                    Technology
+                                </th>
+                                
+                                <th>
+                                       Trainings Completed
+                                </th>
+                                <th>
+                                    Duration
+                                </th>
+                               
+                                <th>Timings</th>
+                                <th>
+                                        Fee
+                                      </th>
+                                <th>
+                                   Rating
+                                 </th>
+                                 <th>Update fee</th>
+                                 <th>Remove</th>
+                            </tr>
+                       <tr *ngFor="let tech of technologies">
+                           <td>{{tech.mentorName}}</td>
+                         
+                           <td>{{tech.technologyName}}</td>
+                           <td>{{tech.noOfTrainingsCompleted}}</td>
+                           <td>{{tech.duration }}</td>
+                           <td>{{tech.startTime }} to {{tech.endTime}}</td>
+                           <td><input   [(ngModel)]="tech.fee" name="fee" ></td>
+                           <td>{{tech.rating }}</td>
+                           <td ><input type="submit" value="Update" (click)="edit(tech)" ></td>
+                            <td ><input type="submit" value="remove" (click)="remove(tech)" ></td>
+                       </tr>
+                       
+                       <tr><td></td><td> <input type="submit" value="ADD" (click)="add()" class="btn btn-success"></td></tr>
+                   </table>
+                   <br>
+                 
+                  
+                 
+                </div>
+                <br>
+                <br>
+               </div>
+            </div>
+    </div>
+    

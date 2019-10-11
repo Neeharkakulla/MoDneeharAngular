@@ -1,0 +1,51 @@
+<h2 align = "center">Completed Trainings</h2> 
+
+<div class="container" >
+  <br>
+  <a routerLink="/trainerhome"><h3><b>Back</b></h3></a>
+     
+  <br>      
+ 
+
+  <table class="table table-hover table-dark" border="2px">
+      <tr>
+            
+          <th> User</th>
+          <th>Mentor</th>
+          <th>Technology</th>
+          <th>Duration</th>
+          <th>Rating</th>
+          <th>Progress</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      <tr  *ngFor="let users of userTraining">
+          <td *ngIf="users.progress < 100 && users.status=='false'">{{users.userName}}</td>
+          <td *ngIf="users.progress < 100 &&users.status=='false'">{{users.mentorName}}</td>
+          <td *ngIf="users.progress < 100 && users.status=='false'">{{users.technologyName}}</td>
+          <td *ngIf="users.progress < 100 && users.status=='false'" >{{users.startDate}} - {{users.startDate}}</td>
+        
+        <td *ngIf="users.progress < 100&&users.status=='false'">{{users.rating}}</td>
+        <td *ngIf="users.progress < 100&&users.status=='false'">{{users.progress}}  </td>
+        
+        
+        <td  *ngIf="users.status=='false'&&users.progress < 100" style="color:red">Pending</td>
+       <td  *ngIf="users.status=='false'&&users.progress < 100"><input type="submit" value="accept" (click)="accept(users)" class="btn btn-success">&nbsp;&nbsp;<input type="submit" (click)="reject(users)"value="reject" class="btn btn-danger"></td>
+      </tr>
+     
+  </table>
+ 
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+

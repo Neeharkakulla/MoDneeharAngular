@@ -1,0 +1,89 @@
+<h2 style="color: blue" align="center">Mentors List</h2>
+<h3 align="center">IOT(AI)</h3>
+<div >
+        <table border="2px" align="center">
+                <tr>
+                        <th>
+                                Mentor Name
+                        </th>
+                        <th>
+                            Technology
+                        </th>
+                        
+                        <th>
+                               Trainings Completed
+                        </th>
+                        <th>
+                            Duration
+                        </th>
+                       
+                        <th>Timings</th>
+                        <th>
+                                Fee
+                              </th>
+                        <th>
+                           Rating
+                         </th>
+                         <th>
+                             Propose
+                         </th>
+                    </tr>
+               <tr *ngFor="let tech of AItech">
+                   <td>{{tech.mentorName}}</td>
+                 
+                   <td>{{tech.technologyName}}</td>
+                   <td>{{tech.noOfTrainingsCompleted}}</td>
+                   <td>{{tech.duration }}</td>
+                   <td>{{tech.startTime }} to {{tech.endTime}}</td>
+                   <td>{{tech.fee }}</td>
+                   <td>{{tech.rating }}</td>
+                    <td><input type="submit" value="Propose" class="btn btn-success" (click)="propose(tech)"></td>
+               </tr>
+               
+           </table>
+       
+        </div>
+        <h3 align="center">IOT(ML)</h3>
+        <div >
+                <table border="2px" align="center">
+                        <tr>
+                                <th>
+                                        Mentor Name
+                                </th>
+                                <th>
+                                    Technology
+                                </th>
+                                
+                                <th>
+                                       Trainings Completed
+                                </th>
+                                <th>
+                                    Duration
+                                </th>
+                               
+                                <th>Timings</th>
+                                <th>
+                                        Fee
+                                      </th>
+                                <th>
+                                   Rating
+                                 </th>
+                                 <th>
+                                     Propose
+                                 </th>
+                            </tr>
+                       <tr *ngFor="let tech of AItech">
+                           <td>{{tech.mentorName}}</td>
+                         
+                           <td>{{tech.technologyName}}</td>
+                           <td>{{tech.noOfTrainingsCompleted}}</td>
+                           <td>{{tech.duration }}</td>
+                           <td>{{tech.startTime }} to {{tech.endTime}}</td>
+                           <td>{{tech.fee }}</td>
+                           <td>{{tech.rating }}</td>
+                            <td><input type="submit" value="Propose" class="btn btn-success" (click)="propose(tech)"></td>
+                       </tr>
+                       
+                   </table>
+               
+                </div>

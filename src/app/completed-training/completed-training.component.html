@@ -1,0 +1,46 @@
+<h2 align = "center">Completed Trainings</h2> 
+
+<div class="container" >
+  <br>
+  <a routerLink="/userhome"><h3><b>Back</b></h3></a>
+     
+  <br>      
+  
+
+  <table class="table table-hover table-dark" border="2px">
+       <tr>
+            
+        <th> User</th>
+        <th>Mentor</th>
+        <th>Technology</th>
+        <th>Duration</th>
+        <th>Rating</th>
+        <th>Progress</th>
+      </tr>
+      <tr  *ngFor="let users of userTraining">
+          <td *ngIf="users.progress == 100">{{users.userName}}</td>
+          <td *ngIf="users.progress == 100">{{users.mentorName}}</td>
+          <td *ngIf="users.progress == 100">{{users.technologyName}}</td>
+          <td *ngIf="users.progress == 100" >{{users.startDate}} - {{users.startDate}}</td>
+        
+        <td *ngIf="users.progress == 100">{{users.rating}}</td>
+        <td *ngIf="users.progress == 100">{{users.progress}}  </td>
+        
+        
+       
+      </tr>
+     
+  </table>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

@@ -1,0 +1,50 @@
+<div  style="background-color: rgb(110, 133, 121)">
+        <a routerLink="/adminhome"><h5 style="color:RED">BACK</h5></a>
+        <p   align="center" style="color:rgba(133, 7, 66, 0.637); font-style:bold;font-size: xx-large; ">Mentors On Demand</p>
+    <h3 align="center">Payments</h3>
+              
+   <div style="background-color: #333127;display:flex;
+   width:100%;
+   height:400px;align-items: center ">
+       <div style="border-radius:30px;
+       height:200px;width:50%;
+       margin:auto;background-color: springgreen">
+       <br>
+        <table align="center" border="2px">
+            <tr>
+                <th>
+                    Mentee
+                </th>
+                <th>
+                    Mentor
+                </th>
+                <th>
+                    Course
+                </th>
+                <th>
+                    Course Fee
+                </th>
+                <th>
+                    Payment Done
+                </th>
+                <th>
+                    Payment left
+                </th>
+            </tr>
+            <tr *ngFor="let pay of payments">
+                <td>
+                   {{pay.mentorName}}
+                </td>
+                <td>
+                        {{pay.userName}}
+                </td>
+                <td> {{pay.technologyName}}</td>
+                <td> {{pay.fee}}</td>
+                <td> {{pay.paid}}</td>
+                <td>{{pay.due}}</td>
+            </tr>
+            </table>
+       </div>
+   </div>
+
+        </div>

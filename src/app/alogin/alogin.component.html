@@ -1,0 +1,41 @@
+<p  id="ALogin" align="center" style="color:rgba(133, 7, 66, 0.637); font-style:bold;font-size: xx-large; ">Mentors On Demand</p>
+<div style="display: flex;
+align-items: center; 
+width: 100%;
+height: 400px;
+background-color: #333127;
+">
+<div style=" width: 50%;
+height: 360px;
+margin: auto;
+border-radius: 40px;
+background-color: #0b68e2;
+font-style: oblique;
+"><a href="#navigation"><h2 style="color:white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" >Navigation</h2></a>
+
+<h2 style="color:white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" align="center">ADMIN LOGIN</h2>
+<div align="center">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td style="color:white"><h4>UserId:</h4></td>
+          <td>
+           
+            <input  placeholder="UserID" [(ngModel)]="username" name="username" required>
+          
+          </td>
+        </tr>
+        <tr>
+            <td style="color:white"><h4>Password:</h4></td>
+        <td>
+          <input  placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+       </td>
+      </tr></table>
+    </form>
+   
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <button (click)="login()" class="btn btn-success">Login</button>&nbsp;&nbsp;
+    <button (click)="cancel()" class="btn btn-danger">Cancel</button>&nbsp;&nbsp;<br><br>
+</div></div>

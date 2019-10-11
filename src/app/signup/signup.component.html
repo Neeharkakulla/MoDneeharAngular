@@ -1,0 +1,73 @@
+<p  id="signup" align="center" style="color:rgba(133, 7, 66, 0.637); font-style:bold;font-size: xx-large; ">Mentors On Demand</p>
+<br><br>
+<div id="signup" style="display: flex;
+align-items: center; 
+width: 100%;
+height: auto;
+background-color: #333127;
+">
+<div style=" width: 50%;
+height: auto;
+margin: auto;
+border-radius: 40px;
+background-color: #0b68e2;
+font-style: oblique;
+">
+<h2  align="center" style="color:white"> User Registration Home</h2>
+<div style=" width: 60%;
+height: auto;
+margin: auto;
+border-radius: 20px;
+background-color: #0b68e2;
+font-style: oblique;
+">
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group" style="color:white">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group" style="color:white">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group" style="color:white">
+      <label for="contactNumber">contactNumber</label>
+      <input type="number" formControlName="contactNumber" class="form-control" ng-pattern="/^[7-9][0-9]{9}$/" [ngClass]="{ 'is-invalid': submitted && f.contactNumber.errors }">
+      <div *ngIf="submitted && f.contactNumber.errors" class="invalid-feedback">
+        <div *ngIf="f.contactNumber.errors.required">contactNumber is required</div>
+    </div>
+  </div>
+    <div class="form-group" style="color:white">
+        <label for="userId">UserId</label>
+        <input type="text" formControlName="userId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userId.errors }" />
+        <div *ngIf="(f.userId.touched) && f.userId.errors" class="invalid-feedback">
+            <div *ngIf="f.userId.errors.required  ">Username is required</div>
+            <div *ngIf=" f.userId.touched">email invalid</div>
+        </div>
+    </div>
+    <div class="form-group" style="color:white">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group" style="color:white">
+        <input type="submit" class="btn btn-success" value="Register" (click)="register()">
+        &nbsp;&nbsp;
+        <input type="submit" class="btn btn-danger" value="cancel" (click)="cancel()">
+        &nbsp;&nbsp;
+        <input type="submit" class="btn btn-info" value="Mentor Login" (click)="mentor()">
+
+    </div>
+</form>
+</div>
+</div>
+</div>
